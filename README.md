@@ -1,22 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version > 2.3
 
-Things you may want to cover:
+* Rails version > 5.1
 
-* Ruby version
+* System dependencies - MongoDB must be installed and running on port 27017 (configure mongoid.yml accordingly)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Deployment instructions: This app is currently deployed on heroku : https://notes-rails-app.herokuapp.com and has MongoDb configured on MangoDB Atlas free tier.
