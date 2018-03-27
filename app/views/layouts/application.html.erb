@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Notes</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= nav_bar inverse: true, fixed: :top, responsive: true, brand: "Application", brand_link: "#" do%>
+      <% if current_user %>
+      <%= menu_group :pull => :right do %>
+        <p class="navbar-text">Signed in as <b><%= current_user.email %></b></p><%= menu_item "Log Out", destroy_user_session_path, :method => :delete %>
+      <%end%>
+      <% end %>
+    <%end%>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <%= display_flash %>
+            <%= yield %>
+          </div>
+      </div>
+    </div>
+    <%= yield :javascript_includes %>
+  </body>
+</html>

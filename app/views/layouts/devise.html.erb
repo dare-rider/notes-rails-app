@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DeviceBootstrapCancan</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <%= nav_bar inverse: true, fixed: :top, responsive: true, brand: "Application", brand_link: "#" %>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <%= display_flash %>
+            <%= yield %>
+          </div>
+          <div class="col-md-3"></div>
+      </div>
+    </div>
+  </body>
+</html>
